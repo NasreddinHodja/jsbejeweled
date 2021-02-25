@@ -243,8 +243,10 @@ class GameImpl {
      */
     removeAndShiftDown(row, col){
         this.grid[row][col] = new BasicIcon(null);
+        this.io.draw(this.grid);
         let cells = this.collapseColumn(col);
         this.applyCells(cells);
+        this.sleep(1000);
     }
 
     /**
@@ -422,6 +424,19 @@ class GameImpl {
             s = s.concat(cells[i].toString()).concat(",\n");
         s = s.concat("}");
         return s;
+    }
+
+    /**
+     * @method
+     * @description
+     * Sleep for specified milliseconds.
+     * @param {number} milliseconds
+     */
+    sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++)
+            if ((new Date().getTime() - start) > milliseconds)
+                break;
     }
 }
 

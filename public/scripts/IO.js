@@ -138,7 +138,6 @@ class IO {
      * @param {number} y
      */
     highlightSquare(x, y) {
-
         this.context.beginPath();
         let border = 10;
         this.context.rect(y + border / 2,
