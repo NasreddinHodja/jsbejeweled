@@ -1,7 +1,7 @@
 # jsbejeweled
 Bejeweled in an HTLM canvas.
 
-The Live App Can Be Accessed At: {site here}
+The Live App Can Be Accessed At: https://renanioliveira.github.io/jsbejeweled/
 
 ## Integrantes
 Renan Ignácio<br>
